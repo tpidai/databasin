@@ -27,10 +27,11 @@ subscription for installation of the Databasin Offering:
 
 |  |  |
 | --- | --- |
-| Microsoft.App | Microsoft.DBforPostgreSQL |
+| Microsoft.App | Microsoft.Network |
 | Microsoft.AppConfiguration| Microsoft.OperationalInsights |
 | Microsoft.Compute | Microsoft.Storage |
-| Microsoft.KeyVault | Microsoft.Web |
+| Microsoft.DBforPostgreSQL | Microsoft.Web |
+| Microsoft.KeyVault |  |
 
 
 Following [these
