@@ -67,8 +67,7 @@ Ensure you have sufficient quota available to deploy a
 6.  **View Standard DDSv5 Family vCPUs:** Type "**Standard DDSv5 Family
     vCPUs"** in the search box to view your current usage**\**
 
-    ![A screenshot of a chat AI-generated content may be
-    incorrect.](./prereq/media/image1.png)
+    ![](./prereq/media/image1.png)
 
 <!-- -->
 
@@ -110,9 +109,9 @@ Follow [these directions](https://learn.microsoft.com/en-us/entra/identity/manag
 to create the required user-assignment managed identity and then assign
 the Microsoft Entra ID role and Azure Subscription roles
 
-A user-assigned managed identity is required for installation and must
-have the following Microsoft Entra ID and Azure Subscription role
-assignments:
+![](./prereq/media/image.png)
+
+The user-assigned managed identity must have the following Microsoft Entra ID and Azure Subscription role assignments:
 
 - **Microsoft Entra ID**
 
