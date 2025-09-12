@@ -46,15 +46,9 @@ as outlined in the [prerequisites](https://github.com/tpidai/databasin/blob/main
 
 ![](./install/media/image4.png)
 
-**App Installer settings**
+**Review + Submit**
 
 ![](./install/media/image5.png)
-
-**Review + Create**
-
-![](./install/media/image6.png)
-
-**Final Review & Deployment**:
 
 - Double-check all configuration settings.
 
@@ -62,3 +56,5 @@ as outlined in the [prerequisites](https://github.com/tpidai/databasin/blob/main
 
 - Wait for the installation to be completed (this may take several
   minutes).
+
+![](./install/media/image6.png)
