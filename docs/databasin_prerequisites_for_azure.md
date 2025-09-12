@@ -34,64 +34,36 @@ subscription for installation of the Databasin Offering:
 | Microsoft.KeyVault |  |
 
 
-Following [these
-directions](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/resource-providers-and-types#register-resource-provider-1)
-to ensure all required **resource providers** are registered
+Following [these directions](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/resource-providers-and-types#register-resource-provider-1) to ensure all required **resource providers** are registered.
 
 ## Subscription Usage + quotas
 
-Ensure you have sufficient quota available to deploy a
-**Standard_D4ds_v5** virtual machine in the Azure Subscription
+Ensure you have sufficient quota available to deploy a **Standard_D4ds_v5** virtual machine in the Azure Subscription
 
-1.  **Login in to the Azure portal:** Access the Azure portal using your
-    Microsoft account credentials. 
-
-<!-- -->
-
-2.  **Navigate to your subscription:** Locate the subscription you want
-    to examine and click on it. 
-
-<!-- -->
-
-3.  **Access \"Usage + quotas\":** In the left-hand navigation pane,
-    under \"Settings,\" select \"Usage + quotas\". 
-
-<!-- -->
-
-5.  **Filter by provider or region:** You can use the filters at the top
-    of the page to narrow down the display to compute resource by
-    region. 
-
-<!-- -->
-
-6.  **View Standard DDSv5 Family vCPUs:** Type "**Standard DDSv5 Family
-    vCPUs"** in the search box to view your current usage**\**
+1.  **Login to the Azure portal:** Access the Azure portal using your Microsoft account credentials. 
+1.  **Navigate to your subscription:** Locate the subscription you want to examine and click on it. 
+1.  **Access \"Usage + quotas\":** In the left-hand navigation pane, under \"Settings,\" select \"Usage + quotas\". 
+1.  **Filter by provider or region:** You can use the filters at the top of the page to narrow down the display to compute resource by region. 
+1.  **View Standard DDSv5 Family vCPUs:** Type "**Standard DDSv5 Family vCPUs"** in the search box to view your current usage**\**
 
     ![](./prereq/media/image1.png)
 
-<!-- -->
-
-7.  **Request quota increases:** If you need to increase a quota, you
-    can initiate a request by selecting the **Request Adjust** icon.
+1.  **Request quota increases:** If you need to increase a quota, you can initiate a request by selecting the **Request Adjust** icon.
 
 ## Network Requirements
-
 ### Network Setup
 
-**Virtual Network**
+#### Virtual Network
 
-#### Option 1: Create a new **Virtual Network** during the installation
+##### Option 1: Create a new **Virtual Network** during the installation
 
 You must have an available address space of size of /24 available to use
 during the installation. No other Networking requirements must be met
 prior to installation.
 
-#### Option 2: Use an existing or preconfigured Virtual Network
+##### Option 2: Use an existing or preconfigured Virtual Network
 
-The following network subnets and subnet delegations are required
-(subnet names are only suggestions). This must be configured prior to
-installation if using an existing Virtual Network or you desire to
-configuration the Virtual Network and subnet in advance.
+The following network subnets and subnet delegations are required (subnet names are only suggestions). This must be configured prior to installation if using an existing Virtual Network or you desire to configuration the Virtual Network and subnet in advance.
 
 
 | **Subnet Name**| **Min Size** | **Delegation** | **Service** |
@@ -105,39 +77,44 @@ configuration the Virtual Network and subnet in advance.
 
 ## Managed Identity Requirements
 
-Follow [these directions](https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/how-manage-user-assigned-managed-identities?pivots=identity-mi-methods-azp#create-a-user-assigned-managed-identity)
-to create the required user-assignment managed identity and then assign
-the Microsoft Entra ID role and Azure Subscription roles
+Follow [these directions](https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/how-manage-user-assigned-managed-identities?pivots=identity-mi-methods-azp#create-a-user-assigned-managed-identity) to create the required user-assignment managed identity and then assign the Microsoft Entra ID role and Azure Subscription roles
 
 ![](./prereq/media/image.png)
 
+### Managed Identity Role Assignments
+
 The user-assigned managed identity must have the following Microsoft Entra ID and Azure Subscription role assignments:
 
-- **Microsoft Entra ID**
+#### Microsoft Entra ID Roles
 
-  - **Cloud Application Administrator** role. This role assignment can be removed after installation/configuration by first assigning the managed identity as an owner of the **Databasin** and **Databasin API** App Registrations created during installation. 
-    - Please ensure the role assignment is **Active** and **Permanently Assigned**
+- **Cloud Application Administrator** role. This role assignment can be removed after installation/configuration by first assigning the managed identity as an owner of the **Databasin** and **Databasin API** App Registrations created during installation.
+  - Settings:
+    - **Assignment Type**: Active
+    - **Permanently Assigned**: Checked
 
-    ![A screenshot of a computer AI-generated content may be incorrect.](./prereq/media/image2.png)
+  ![A screenshot of a computer AI-generated content may be incorrect.](./prereq/media/image2.png)
 
-- **Azure Subscription Roles:**
+#### Azure Subscription Roles
 
-  - **Contributor** role granted at the subscription level. 
-    - Please ensure **Assignment Type** is **Active,** and the assignment duration is **Permanent**
+- **Contributor** role granted at the subscription level. 
+  - Assignment type
+    - **Assignment Type**: Active
+    - **Assignment Duration**: **Permanent**
+  
+  ![](./prereq/media/image3.png)
+
+- **User Access Administrator** role granted at the subscription level. 
+  - Conditions:
+    - **What user can do**: Allow user to assign all roles (highly privileged)
+    - **Conditions**: None
+
+  ![](./prereq/media/image4.png)
+
+  - Assignment type
+    - **Assignment Type** is **Active**
+    - **Assignment duration** is **Permanent** and no conditions as assigned
     
-      ![](./prereq/media/image3.png)
-
-  - **User Access Administrator** role granted at the subscription level. 
-    - Please ensure conditions 
-      - **Allow user to assign all roles (highly privileged)** is selected
-      - **Conditions** is **None**
-
-      ![](./prereq/media/image4.png)
-    - Assignment type
-      - **Assignment Type** is **Active**
-      - **Assignment duration** is **Permanent** and no conditions as assigned
-      
-      ![](./prereq/media/image3.png)
+  ![](./prereq/media/image3.png)
 
 ## Private Offering Requirements
 
