@@ -65,7 +65,7 @@ as outlined in the [prerequisites](https://github.com/tpidai/databasin/blob/main
 #### Option 1: Create new Virtual Network
 You may leave the new virtual network settings defaulted or select **edit** to modify the virtual network settings.
 1. **Deploy Gateway**: Recommend
-1. **Virtual Network**: Must be of of size /24 or larger
+1. **Virtual Network**: Must be size /24 or larger
 1. **Databasin Subnet**: Must be size /25 or larger
 1. **Databasin Management Subnet**: Must be size /29 or larger
 1. **PostgreSQL Subnet**: Must be size /28 or larger
@@ -75,7 +75,7 @@ You may leave the new virtual network settings defaulted or select **edit** to m
 ### Review + Submit
 #### Terms
 1. Review the terms
-1. **Prefered Phone Number**: Provide a valid phone number
+1. **Preferred Phone Number**: Provide a valid phone number
 #### Co-Admin Access Permission
 1. **I agree to the terms and conditions above**: checked
 
@@ -87,8 +87,23 @@ You may leave the new virtual network settings defaulted or select **edit** to m
 ![](./install/media/image5.png)
 
 
-### Deployment
-1. Wait for the installation to complete (this will take several
-  minutes).
+## Deployment
+### 
+Wait for the installation to complete (this will take several minutes).
 
 ![](./install/media/image6.png)
+
+## Retrieve the Databasin URL from the Deployment Output values
+###
+Expand the **Deployment details** and select the Resource link (i.e. databasin) for the Managed application.
+ 
+![](./install/media/image7.png)
+
+### 
+Select the **Settings** -> **Parameters and Outputs** from the menu on the left of the Managed application and scroll to the **outputs** section. Copy the value of the **databasinEndpoint** and save this URL.
+
+![](./install/media/image8.png)
+
+###
+Complete the [Post-installation Steps](https://github.com/tpidai/databasin/blob/main/docs/databasin_post_install_for_azure.md) to configure Databasin.
+
