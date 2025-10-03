@@ -87,23 +87,22 @@ You may leave the new virtual network settings defaulted or select **edit** to m
 ![](./install/media/image5.png)
 
 
-## Deployment
-### 
-Wait for the installation to complete (this will take several minutes).
+### Copy Deployment Outputs to be used for Post-Installation Configuration
+1. Wait for the installation to be completed (this will take several minutes). Once the deployment is complete, expand the **Deployment details** and select the Resource link (i.e. databasin) for the Managed application.
 
-![](./install/media/image6.png)
+   ![](./install/media/image6.png)
 
-## Retrieve the Databasin URL from the Deployment Output values
-###
-Expand the **Deployment details** and select the Resource link (i.e. databasin) for the Managed application.
- 
-![](./install/media/image7.png)
 
-### 
-Select the **Settings** -> **Parameters and Outputs** from the menu on the left of the Managed application and scroll to the **outputs** section. Copy the value of the **databasinEndpoint** and save this URL.
+1. From the Managed Application **Overview** blade, select the **Settings** -> **Parameters and Outputs** from the menu on the left and scroll to the **outputs** section to copy the value of the **databasinEndpoint** output.
+   
+   ![](./install/media/image9.png)
+  
+   Example Output:
+   ``` 
+   {  "domain_name": "calmsmoke-e7a7bdc1.centralus.azurecontainerapps.io",  "domain_ip_address": "172.16.0.112",  "databasin_login_url": "https://databasin-ui.calmsmoke-e7a7bdc1.centralus.azurecontainerapps.io"  }
+   ```
+   You will use these values in the Post-Installation Steps
 
-![](./install/media/image8.png)
-
-###
+## Post-Installation
 Complete the [Post-installation Steps](https://github.com/tpidai/databasin/blob/main/docs/databasin_post_install_for_azure.md) to configure Databasin.
 
