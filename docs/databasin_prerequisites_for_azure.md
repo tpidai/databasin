@@ -65,6 +65,8 @@ prior to installation.
 
 The following network subnets and subnet delegations are required (subnet names are only suggestions). This must be configured prior to installation if using an existing Virtual Network or you desire to configuration the Virtual Network and subnet in advance.
 
+**Ensure there are no Network Security Groups or NAT Gateways associated with these subnet as they will be created during installation.**
+
 
 | **Subnet Name**| **Min Size** | **Delegation** | **Service** |
 | --- | --- | --- | --- |
@@ -73,6 +75,7 @@ The following network subnets and subnet delegations are required (subnet names 
 |                         |                     |                                           | Microsoft.Storage       |
 | databasin-postgresql-sn | /28                 | Microsoft.DBforPostgreSQL/flexibleServers | Microsoft.Storage       |
 | databasin-management-sn | /29                 |                                           | Microsoft.Storage       |
+
 
 
 ## Managed Identity Requirements
