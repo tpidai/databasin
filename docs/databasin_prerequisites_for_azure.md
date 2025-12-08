@@ -90,6 +90,11 @@ The user-assigned managed identity must have the following Microsoft Entra ID an
 
 #### Microsoft Entra ID Roles
 
+- **Application Administrator** role. This role assignment can be removed after installation/configuration by first assigning the managed identity as an owner of the **Databasin** and **Databasin API** App Registrations created during installation.
+  - Settings:
+    - **Assignment Type**: Active
+    - **Permanently Assigned**: Checked
+
 - **Cloud Application Administrator** role. This role assignment can be removed after installation/configuration by first assigning the managed identity as an owner of the **Databasin** and **Databasin API** App Registrations created during installation.
   - Settings:
     - **Assignment Type**: Active
@@ -136,3 +141,4 @@ Azure Marketplace Private offering.
 
 - [Accept the private
   offer](https://learn.microsoft.com/en-us/marketplace/private-offers-accept-offer)
+
