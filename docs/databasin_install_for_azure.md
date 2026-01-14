@@ -70,7 +70,7 @@ You may leave the new virtual network settings defaulted or select **edit** to m
 1. **Deploy Gateway**: Recommend
 1. **Virtual Network**: Select existing virtual network with existing subnets and delegations configured as part of the [prerequisites](https://github.com/tpidai/databasin/blob/main/docs/databasin_prerequisites_for_azure.md#network-requirements)
 1. **Databasin Subnet**: Select previously configured size /25 or larger subnet with Microsoft.App/environments delegation
-1. **Databasin Management Subnet**: Select previously configured size /29 or larger subnet
+1. **Databasin Management Subnet**: Select previously configured size /28 or larger subnet
 1. **PostgreSQL Subnet**: Select previously configured size /28 or larger subnet with Microsoft.DBforPostgreSQL/flexibleServers delegation
 
 

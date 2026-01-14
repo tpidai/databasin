@@ -55,7 +55,7 @@ Ensure you have sufficient quota available to deploy a **Standard_D4ds_v5** virt
 
 #### Virtual Network
 
-##### Option 1: Create a new **Virtual Network** during the installation
+##### Option 1 (RECOMMENDED): Create a new **Virtual Network** during the installation
 
 You must have an available address space of size of /24 available to use
 during the installation. No other Networking requirements must be met
@@ -63,19 +63,19 @@ prior to installation.
 
 ##### Option 2: Use an existing or preconfigured Virtual Network
 
-The following network subnets and subnet delegations are required (subnet names are only suggestions). This must be configured prior to installation if using an existing Virtual Network or you desire to configuration the Virtual Network and subnet in advance.
+The following network subnets and subnet delegations are required (subnet names are only suggestions). Thes must be configured prior to installation if using an existing Virtual Network or you desire to configuration the Virtual Network and subnet in advance. [Service Endpoints](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-service-endpoints-overview) are recommended but not required. 
 
 **Ensure there are no Network Security Groups or NAT Gateways associated with these subnet as they will be created during installation.**
 
 
-| **Subnet Name**| **Min Size** | **Delegation** | **Service** |
+| **Subnet Name**| **Min Size** | **Delegation** | **Service** (Recommended by not required) |
 | --- | --- | --- | --- |
 | databasin-sn            | /25                 | Microsoft.App/environments                | Microsoft.KeyVault      |
 |                         |                     |                                           | Microsoft.Sql           |
 |                         |                     |                                           | Microsoft.Storage       |
-| databasin-postgresql-sn | /28                 | Microsoft.DBforPostgreSQL/flexibleServers | Microsoft.Storage       |
-| databasin-management-sn | /28                 |                                           | Microsoft.Storage       |
-|                         |                     |                                           | Microsoft.KeyVault      |     
+| databasin-postgresql-sn | /28                 | Microsoft.DBforPostgreSQL/flexibleServers |      |
+| databasin-management-sn | /28                 |                                           |       |
+|                         |                     |                                           |       |     
 
 
 
