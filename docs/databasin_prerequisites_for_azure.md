@@ -74,7 +74,7 @@ The following network subnets and subnet delegations are required (subnet names 
 |                         |                     |                                           | Microsoft.Sql           |
 |                         |                     |                                           | Microsoft.Storage       |
 | databasin-postgresql-sn | /28                 | Microsoft.DBforPostgreSQL/flexibleServers | Microsoft.Storage       |
-| databasin-management-sn | /29                 |                                           | Microsoft.Storage       |
+| databasin-management-sn | /28                 |                                           | Microsoft.Storage       |
 |                         |                     |                                           | Microsoft.KeyVault      |     
 
 

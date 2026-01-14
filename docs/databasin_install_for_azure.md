@@ -61,7 +61,7 @@ You may leave the new virtual network settings defaulted or select **edit** to m
 1. **Deploy Gateway**: Recommend
 1. **Virtual Network**: Must be size /24 or larger
 1. **Databasin Subnet**: Must be size /25 or larger
-1. **Databasin Management Subnet**: Must be size /29 or larger
+1. **Databasin Management Subnet**: Must be size /28 or larger
 1. **PostgreSQL Subnet**: Must be size /28 or larger
 
 ![](./install/media/image4.png)
