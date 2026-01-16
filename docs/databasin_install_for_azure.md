@@ -50,7 +50,7 @@ as outlined in the [prerequisites](https://github.com/tpidai/databasin/blob/main
 ### User assigned managed identity
 1. Press the **+Add** to select the user assigned managed identity created as part of the [prerequisites](https://github.com/tpidai/databasin/blob/main/docs/databasin_prerequisites_for_azure.md#managed-identity-requirements)
 ### User assigned managed identity
-1. **Install Admin User Email Address**: must be a valid email address
+1. **Install Admin User Email Address**: must be a valid email address, from within the azure tenant of where you are installing. This will become the super user of the system.
 
 ![](./install/media/image3.png)
 
@@ -107,4 +107,5 @@ You may leave the new virtual network settings defaulted or select **edit** to m
 
 ## Post-Installation
 Complete the [Post-installation Steps](https://github.com/tpidai/databasin/blob/main/docs/databasin_post_install_for_azure.md) to configure Databasin.
+
 
