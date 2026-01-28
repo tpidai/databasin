@@ -21,8 +21,11 @@ You must have the information below obtained from the "databasinEndpoint" output
    You will use these values in the following steps
 
 
-## DNS Configuration
-Configure your internal environment DNS infrastructure to route traffic to Databasin by creating a DNS zone and Host A records to resolve to the Databasin application in Azure
+
+## Azure Default Provided DNS Configuration
+If you are planning to integrate with Azure Application Gateway, this step is optional.
+
+Configure your internal environment DNS infrastructure to route traffic to Databasin by creating a DNS zone and Host A records to resolve to the Databasin application in the Azure provided DNS zone <UNIQUE_IDENTIFIER>.<REGION_NAME>.azurecontainerapps.io (i.e. calmsmoke-e7a7bdc1.centralus.azurecontainerapps.io )
 
 
 ### DNS Zone Creation
@@ -56,6 +59,13 @@ Select you DNS Zone (i.e. calmsmoke-e7a7bdc1.centralus.azurecontainerapps.io ) t
 ##  Complete Project Configuration
 
 ![](./post_install/media/image3.png)
+
+
+## Next Steps 
+- [Protect Azure Container Apps with Web Application Firewall on Application Gateway](https://learn.microsoft.com/en-us/azure/container-apps/waf-app-gateway?tabs=default-domain)
+- [Integrate with Azure Firewall](https://learn.microsoft.com/en-us/azure/container-apps/use-azure-firewall)
+    - [Control outbound traffic in Azure Container Apps with user defined routes](https://learn.microsoft.com/en-us/azure/container-apps/user-defined-routes)
+- [Create and manage a VPN gateway using the Azure portal](https://learn.microsoft.com/en-us/azure/vpn-gateway/tutorial-create-gateway-portal)
 
 
 ## Troubleshooting & Support
